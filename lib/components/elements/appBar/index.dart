@@ -44,7 +44,6 @@ AppBar appBarComp(context) {
             color: Colors.black38, // Color del borde
             width: 1.5, // Ancho del borde
           ),
-
           borderRadius: BorderRadius.circular(
               8), // Establece el radio de borde en cero para un borde cuadrado
         ),
