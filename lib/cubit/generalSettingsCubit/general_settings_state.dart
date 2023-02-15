@@ -2,29 +2,34 @@ part of 'general_settings_cubit.dart';
 
 class GeneralSettingsState extends Equatable {
   List allColors;
-  Color primaryColor;
-  Color secondaryColor;
+  Color primaryBackground;
+  Color secondaryBackground;
+  bool loading;
 
   GeneralSettingsState(
     this.allColors, {
-    this.primaryColor = Colors.white,
-    this.secondaryColor = Colors.black,
+    this.primaryBackground = Colors.white,
+    this.secondaryBackground = Colors.black,
+    this.loading = false,
   });
 
   GeneralSettingsState.init() : this([]);
 
   GeneralSettingsState copyWith({
     List? allColors,
-    Color? primaryColor,
-    Color? secondaryColor,
+    bool? loading,
+    Color? primaryBackground,
+    Color? secondaryBackground,
   }) {
     return GeneralSettingsState(
       allColors ?? this.allColors,
-      primaryColor: primaryColor ?? this.primaryColor,
-      secondaryColor: secondaryColor ?? this.secondaryColor,
+      primaryBackground: primaryBackground ?? this.primaryBackground,
+      loading: loading ?? this.loading,
+      secondaryBackground: secondaryBackground ?? this.secondaryBackground,
     );
   }
 
   @override
-  List<Object> get props => [allColors, primaryColor, secondaryColor];
+  List<Object> get props =>
+      [allColors, loading, primaryBackground, secondaryBackground];
 }

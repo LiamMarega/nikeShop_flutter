@@ -58,6 +58,7 @@ class _ContainerScreensState extends State<ContainerScreens> {
           label: '',
         ),
         child: Scaffold(
+          backgroundColor: Colors.white,
           body: renderPage(),
           resizeToAvoidBottomInset: false,
           bottomNavigationBar: SalomonBottomBar(
