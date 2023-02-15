@@ -15,7 +15,7 @@ class CarouselOffers extends StatelessWidget {
     return CarouselSlider(
       options: CarouselOptions(
         height: 230.0,
-        autoPlay: false,
+        autoPlay: true,
         viewportFraction: 1,
       ),
       items: [1, 2, 3, 4, 5].map((i) {
